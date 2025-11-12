@@ -1,0 +1,61 @@
+1. Design the Single Table (Enquiry)
+Let's list all the fields you'll likely need, based on your frontend pages and typical student enquiry flows:
+A. Basic Info (Page 1)
+id (auto)
+name
+email
+phone
+current_location
+module (subject/module of enquiry)
+timing (preferred training mode)
+trainingTime (preferred training timings)
+startTime (how soon to start)
+profession (student's professional situation)
+qualification (highest qualification)
+experience (years of experience)
+referral (how did they hear about you)
+consent (boolean)
+B. Enquiry Details (Page 2, for counselors)
+calling1 (call status 1)
+calling2
+calling3
+calling4
+calling5
+previous_interaction (notes or status)
+status (e.g., 'new', 'in_progress', 'moved', etc.)
+C. Demo/Batch/Accounts (Page 3, for accounts)
+batch_code
+batch_subject
+demo_class_status
+payment_status
+move_to_demo (boolean or status)
+admin_notes
+D. HR/Placement/Interview (Pages for HR)
+placement_status
+placement_notes
+interview_status
+interview_notes
+E. System Fields
+created_at
+updated_at
+user (ForeignKey to User, if you want to track who created/edited)
+
+----------------------------------------------------
+Complete the Counsellor's Part
+For the counsellor role, you want to enable:
+View and access:
+/enquiry-form (POST to /api/enquiries/)
+/enquiry-list (GET from /api/enquiries/)
+/demo-list (GET from /api/demo_lists/)
+What we need to ensure:
+Enquiry Form: Submits new enquiries to /api/enquiries/ (already set up).
+Enquiry List: Fetches and displays data from /api/enquiries/ (mapping is now correct).
+Demo List: Fetches data from /api/demo_lists/.
+Sidebar: Only shows these three links for counsellors (already implemented).
+Role-based API access: If you want to restrict API access on the backend,
+ make sure your Django views check the user's role.
+
+
+
+for the datalink : 
+placement details

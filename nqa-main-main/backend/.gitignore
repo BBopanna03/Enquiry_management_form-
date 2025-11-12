@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+*.pyd
+*.sqlite3
+media/
+staticfiles/
+
+# Virtual environment
+venv/
+.env
+.env.local
+*.env
+
+# IDE / Editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node (if you have a React frontend folder inside)
+node_modules/
+build/
+dist/
